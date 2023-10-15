@@ -41,6 +41,10 @@ div{
     z-index: 1;
 }
 
+.cont-blog{
+    background-color: white !important;
+}
+
 #blogtitle {
     font-size: 5rem;
 }

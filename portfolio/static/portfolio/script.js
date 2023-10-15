@@ -14,16 +14,16 @@ properties = {
 };
 
 window.onresize = function(){
-    w = canvas.width = document.documentElement.scrollWidth;
+    w = canvas.width = document.documentElement.scrollHeight;
     h = canvas.height = document.documentElement.scrollHeight;
-    if(w < 1000 ){
+    if(document.documentElement.clientWidth < 1400){
         properties = {
             bgColor             : 'white',
             particleColor       : 'rgba(10, 10, 10, 0.7)',
             particleRadius      : 2,
             particleCount       : 25,
             particleMaxVelocity : 0.5,
-            lineLength          : 90,
+            lineLength          : 70,
             particleLife        : 6,
         }
     }
