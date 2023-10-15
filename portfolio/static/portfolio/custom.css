@@ -1,4 +1,4 @@
-.navbar-nav .nav-link {
+.nav-link {
     color: rgba(0,0,0,1) !important;
 }
 .navbar-nav  {
@@ -34,6 +34,7 @@ body {
 canvas{
     position: absolute;
     z-index: -1;
+    transform-origin: 0 0;
 }
 
 div{
@@ -42,6 +43,9 @@ div{
 
 #blogtitle {
     font-size: 5rem;
+}
+#topNav{
+    background-color: white;
 }
 
 @media (min-width: 992px) {
