@@ -5,17 +5,28 @@ h = canvas.height = document.documentElement.scrollHeight;
 particles = [];
 properties = {
     bgColor             : 'white',
-    particleColor       : 'rgba(10, 10, 10, 1)',
+    particleColor       : 'rgba(10, 10, 10, 0.7)',
     particleRadius      : 3,
-    particleCount       : 60,
+    particleCount       : 40,
     particleMaxVelocity : 0.5,
-    lineLength          : 160,
+    lineLength          : 150,
     particleLife        : 6,
 };
 
 window.onresize = function(){
     w = canvas.width = document.documentElement.scrollWidth;
     h = canvas.height = document.documentElement.scrollHeight;
+    if(w < 1000 ){
+        properties = {
+            bgColor             : 'white',
+            particleColor       : 'rgba(10, 10, 10, 0.7)',
+            particleRadius      : 2,
+            particleCount       : 25,
+            particleMaxVelocity : 0.5,
+            lineLength          : 90,
+            particleLife        : 6,
+        }
+    }
 }
 
 class Particle{
@@ -68,7 +79,7 @@ function drawLines(){
             if(length < properties.lineLength){
                 opacity = 1-length/properties.lineLength;
                 ctx.lineWidth = '0.5';
-                ctx.strokeStyle = 'rgba(10, 10, 10, '+opacity+')';
+                ctx.strokeStyle = 'rgba(10, 10, 10, 0.3)';
                 ctx.beginPath();
                 ctx.moveTo(x1, y1);
                 ctx.lineTo(x2, y2);
