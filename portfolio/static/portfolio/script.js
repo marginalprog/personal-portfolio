@@ -3,6 +3,17 @@ ctx = canvas.getContext('2d');
 w = canvas.width = document.documentElement.scrollWidth;
 h = canvas.height = document.documentElement.scrollHeight;
 particles = [];
+if(w < 900){
+    properties = {
+    bgColor             : 'white',
+    particleColor       : 'rgba(10, 10, 10, 0.7)',
+    particleRadius      : 2,
+    particleCount       : 25,
+    particleMaxVelocity : 0.5,
+    lineLength          : 90,
+    particleLife        : 6,
+};
+} else {
 properties = {
     bgColor             : 'white',
     particleColor       : 'rgba(10, 10, 10, 0.7)',
@@ -12,6 +23,7 @@ properties = {
     lineLength          : 150,
     particleLife        : 6,
 };
+}
 
 window.onresize = function(){
     w = canvas.width = document.documentElement.scrollWidth;
@@ -23,7 +35,7 @@ window.onresize = function(){
             particleRadius      : 2,
             particleCount       : 25,
             particleMaxVelocity : 0.5,
-            lineLength          : 50,
+            lineLength          : 90,
             particleLife        : 6,
         }
     }
