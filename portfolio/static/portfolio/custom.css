@@ -35,6 +35,7 @@ canvas{
     position: absolute;
     z-index: -1;
     transform-origin: 0 0;
+    -webkit-size-adjust: 100%;
 }
 
 div{
