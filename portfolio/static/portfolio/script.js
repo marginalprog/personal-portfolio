@@ -10,7 +10,7 @@ if(w < 900){
     particleRadius      : 2,
     particleCount       : 25,
     particleMaxVelocity : 0.5,
-    lineLength          : 90,
+    lineLength          : 95,
     particleLife        : 6,
 };
 } else {
