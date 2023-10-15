@@ -1,7 +1,7 @@
 var canvas = document.querySelector('canvas');
 ctx = canvas.getContext('2d');
 w = canvas.width = document.documentElement.scrollWidth;
-h = canvas.height = document.documentElement.scrollWidth;
+h = canvas.height = document.documentElement.scrollHeight;
 particles = [];
 properties = {
     bgColor             : 'white',
@@ -16,7 +16,7 @@ properties = {
 window.onresize = function(){
     w = canvas.width = document.documentElement.scrollWidth;
     h = canvas.height = document.documentElement.scrollHeight;
-    if(document.documentElement.clientWidth < 1400){
+    if(w < 1000){
         properties = {
             bgColor             : 'white',
             particleColor       : 'rgba(10, 10, 10, 0.7)',
